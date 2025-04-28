@@ -5,12 +5,14 @@ version: '3.1'
 services:
     adminer:
       image: adminer
+      platform: linux/x86_64
       restart: always
       ports:
         - 8099:8080
 
     db:
       image: mysql:5.6
+      platform: linux/x86_64
       restart: always
       environment:
         MYSQL_ROOT_PASSWORD: db_data_123
