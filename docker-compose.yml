@@ -27,3 +27,10 @@ services:
         - .:/var/www
       ports:
         - 8030:80
+
+    mailhog:
+      image: mailhog/mailhog
+      restart: always
+      ports:
+        - 8025:8025  # Interfaz web de MailHog
+        - 1025:1025  # Puerto SMTP
